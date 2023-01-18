@@ -8,7 +8,7 @@ eval "$(starship init zsh)"
 roson() {
 	source /opt/ros/noetic/setup.zsh
 
-	if [ $1 = "startcore" ]
+	if [ $1 -e "startcore" ]
 	then
 		stfu roscore & disown
 	fi
