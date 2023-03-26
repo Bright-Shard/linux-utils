@@ -1,0 +1,4 @@
+#!/bin/bash
+
+clear
+sudo openvpn ~/Documents/OpenVPN/$1.ovpn
