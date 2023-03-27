@@ -1,4 +1,19 @@
-sudo apt update
-sudo apt full-upgrade -y
-sudo apt autoremove -y
-echo "Done."
+#!/bin/bash
+
+if [ -x "$(command -v apt)" ]
+then
+	sudo apt update
+	sudo apt full-upgrade -y
+	sudo apt autoremove -y
+	echo "Done."
+elif [ -x "$(command -v aura)" ]
+then
+	sudo aura -Syu
+	sudo aura -Ayu
+elif [ -x "$(command -v pacman)" ]
+then
+	sudo pacman -Syu
+else
+	echo "ERROR: Failed to detect a package manager"
+	echo "Note: Currently, only APT, Pacman, and Aura are supported."
+fi
