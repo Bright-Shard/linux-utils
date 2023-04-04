@@ -53,7 +53,7 @@ sudo $STFU $INSTALL cmake
 $STFU cargo install cargo-binstall
 echo "Done."
 echo "Installing Starship..."
-$STFU cargo binstall starship
+$STFU cargo binstall starship -y
 echo "Done."
 echo "Setting up Zsh..."
 ln -sf $(pwd)/.zshrc ~/.zshrc
