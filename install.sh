@@ -47,6 +47,7 @@ sudo $STFU $INSTALL zsh
 echo "Done."
 echo "Installing Rust..."
 $STFU curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain nightly --profile complete -y
+source $HOME/.cargo/env
 sudo $STFU $INSTALL pkgconf
 sudo $STFU $INSTALL cmake
 $STFU cargo install cargo-binstall
