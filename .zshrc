@@ -1,6 +1,12 @@
 # Rust
 source ~/.cargo/env
 
+# Ruby
+for file in $(ls ~/.local/share/gem/ruby/)
+do
+	export PATH=$PATH:~/.local/share/gem/ruby/$file/bin/
+done
+
 # Starship prompt
 eval "$(starship init zsh)"
 
