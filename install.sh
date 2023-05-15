@@ -56,6 +56,7 @@ echo "Installing Rust..."
 $STFU curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain nightly --profile complete -y
 $SUDO $STFU $INSTALL pkgconf
 $SUDO $STFU $INSTALL cmake
+source $HOME/.cargo/env
 echo "Done."
 echo "Installing Starship..."
 $STFU cargo install starship
