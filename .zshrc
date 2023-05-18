@@ -2,10 +2,11 @@
 source ~/.cargo/env
 
 # Ruby
-for file in $(ls ~/.local/share/gem/ruby/)
+for file in $(ls ~/.local/share/gem/ruby)
 do
-	export PATH=$PATH:~/.local/share/gem/ruby/$file/bin/
+	export PATH=~/.local/share/gem/ruby/$file/bin:$PATH
 done
+export BUNDLE_PATH=$HOME/.bundle
 
 # Starship prompt
 eval "$(starship init zsh)"
