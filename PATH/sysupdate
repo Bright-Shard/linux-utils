@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cargo install-update -a
+
 if [ -x "$(command -v apt)" ]
 then
 	sudo apt update

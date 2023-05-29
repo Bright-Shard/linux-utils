@@ -61,6 +61,9 @@ echo "Done."
 echo "Installing Starship..."
 $STFU cargo install starship
 echo "Done."
+echo "Installing cargo-update..."
+$STFU cargo install cargo-update
+echo "Done."
 echo "Setting up Zsh..."
 ln -sf $(pwd)/.zshrc ~/.zshrc
 echo "Done."
