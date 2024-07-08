@@ -38,7 +38,15 @@ else
 	echo "Note: Currently, this script only supports APT and Pacman. Use a different package manager? Make a PR!"
 	exit
 fi
-STFU=$(pwd)/PATH/stfu
+
+echo "Would you like to hide the output from the installation commands? (Y/n)"
+read HIDE_OUTPUT
+if [ $HIDE_OUTPUT == 'y' ] || [ $HIDE_OUTPUT == 'Y' ]
+then
+	STFU=$(dirname $0)/PATH/stfu
+else
+	STFU=
+fi
 
 # Actual installer
 

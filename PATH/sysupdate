@@ -1,6 +1,12 @@
 #!/bin/bash
 
+rustup update
 cargo install-update -a
+
+if [ -x "$(command -v flatpak)" ]
+then
+	flatpak update
+fi
 
 if [ -x "$(command -v apt)" ]
 then
