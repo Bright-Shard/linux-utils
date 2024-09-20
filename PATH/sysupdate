@@ -16,8 +16,8 @@ then
 	echo "Done."
 elif [ -x "$(command -v aura)" ]
 then
-	sudo aura -Syu
-	sudo aura -Ayu
+	aura -Syu
+	aura -Ayu
 elif [ -x "$(command -v pacman)" ]
 then
 	sudo pacman -Syu
